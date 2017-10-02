@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+	<h1>CODE GENERATOR</h1>
+	<% if @code %>
+		<p id="random-code"><%= @code.code %></p>
+	<% end %>
+	<%= button_to 'Generate new code', code_index_path, :method => :post %>
+</div>
+
+<div>
+	<h2>Codes Used</h2>
+	<% @codes.each do |x| %>
+		<p><%= x.code %></p>
+	<% end %>
+</div>
