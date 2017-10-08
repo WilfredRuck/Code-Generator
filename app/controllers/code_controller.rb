@@ -1,6 +1,6 @@
 class CodeController < ApplicationController
   def index
-  	@code = Code.last
+  	flash[:success] = "Code created!";
   	@codes = Code.all
   end
 
@@ -19,6 +19,7 @@ class CodeController < ApplicationController
 	  	code = (firstLetters + numbers + secondLetters)
 	  	if (Code.where(code: code).any? == false)
 		  	Code.create(code: code)
+		  	flash[:code] = code;
 	  		redirect_to root_path
 	  	else
 	  		code = ''
