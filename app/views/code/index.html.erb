@@ -2,8 +2,6 @@
 	<h1>CODE GENERATOR</h1>
 	<% if flash[:code] %>
 		<p id="success"> <%= flash[:success] %> </p>
-	<% end %>
-	<% if flash[:code] %>
 		<div id="random-code"><%= flash[:code] %></div>
 	<% end %>
 	<%= button_to 'Generate new code', code_index_path, :class => "button", :method => :post %>
