@@ -1,0 +1,80 @@
+/* line 5, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+#success {
+  color: red;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+/* line 11, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.genSection {
+  display: table;
+  margin: 0 auto;
+  border: solid 2px black;
+  text-align: center;
+  padding: 50px;
+}
+
+/* line 19, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.button {
+  background-color: black;
+  border: 2px black solid;
+  color: white;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* line 30, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.button:hover {
+  font-size: 17px;
+  color: #e5e5e5;
+  cursor: pointer;
+}
+
+/* line 36, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+#random-code {
+  border: 1px black dotted;
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+/* line 43, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.usedSection {
+  float: left;
+  height: 300px;
+}
+
+/* line 48, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.usedCodes {
+  height: 100%;
+  width: 100%;
+  border: solid 1px black;
+  overflow-y: auto;
+}
+
+/* line 55, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.usedCode {
+  border-bottom: solid 1px black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
