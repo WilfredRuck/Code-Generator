@@ -1,7 +1,7 @@
 class CodeController < ApplicationController
   def index
   	flash[:success] = "Code created!";
-  	@codes = Code.all
+  	@codes = Code.all.reverse
   end
 
   def create
