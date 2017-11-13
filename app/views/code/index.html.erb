@@ -4,17 +4,21 @@
 		<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
 		<div id="random-code">
 			<%= flash[:code] %> 
+			<button onclick="copyText('<%= flash[:code] %>')" class="copy">copy</button>
+			<div id="copied"></div>
 		</div>
-			<button onclick="copyText('<%= flash[:code] %>')">Copy</button>
 	<% end %>
 	<%= button_to 'Generate new code', code_index_path, :class => "button", :method => :post %>
 </div>
 
 <div class="usedSection">
-	<h2>[<%= @codes.length %>]</h2>
 	<div class="usedCodes">
 		<% @codes.each do |x| %>
 			<div class="usedCode"><%= x.code %></div>
 		<% end %>
 	</div>
+</div>
+
+<div>
+	<div class="code-count"><%= @codes.length %></div>
 </div>
