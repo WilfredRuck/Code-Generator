@@ -2,6 +2,7 @@
   "name": "CodeGenerator",
   "private": true,
   "dependencies": {
+    "clipboard-polyfill": "^2.3.0",
     "jquery": "^3.2.1"
   }
 }
