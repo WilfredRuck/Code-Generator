@@ -120,3 +120,29 @@ h1 {
     	width: 90%;
     }
 }
+
+@media screen and (max-width: 400px) {
+	.code-count {
+        display: none;
+    }
+
+    .usedSection {
+    	margin: 0 auto;
+    	margin-top: 60px;
+    	width: 90%;
+    }
+
+    .genSection {
+    	margin: 0 auto;
+    	margin-top: 50px;
+    	width: 90%;
+    }
+
+    .button {
+    	width: 250px;
+    }
+
+    #random-code {
+    	width: 250px;
+    }
+}
