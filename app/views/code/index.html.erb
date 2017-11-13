@@ -12,11 +12,9 @@
 </div>
 
 <div class="usedSection">
-	<div class="usedCodes">
-		<% @codes.each do |x| %>
-			<div class="usedCode"><%= x.code %></div>
-		<% end %>
-	</div>
+	<% @codes.each do |x| %>
+		<div class="usedCode"><%= x.code %></div>
+	<% end %>
 </div>
 
 <div>

@@ -87,11 +87,6 @@ h1 {
 	display: table;
 	margin: 0 auto;
 	text-align: center;
-	height: 300px;
-}
-
-.usedCodes {
-	height: 100%;
 	width: 550px;
 	margin-top: 60px;
 	color: white;
@@ -104,4 +99,24 @@ h1 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 3px;
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .code-count {
+        display: none;
+    }
+
+    .usedSection {
+    	margin: 0 auto;
+    	margin-top: 60px;
+    	width: 90%;
+    }
+
+    .genSection {
+    	margin: 0 auto;
+    	margin-top: 50px;
+    	width: 90%;
+    }
 }
