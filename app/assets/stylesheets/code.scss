@@ -63,24 +63,47 @@ h1 {
 .button:hover {
 	color: white;
 	cursor: pointer;
+	-webkit-transition: all 250ms linear;
+  	transition: all 250ms linear;
 }
 
 .copy {
-	background-color: lightgray;
-	font-size: 10px;
-	padding: 7px 4px 7px 4px;
+	background-color: #bad433;
+	color: #000000;
+	border: none;
+	float: right;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 8px;
+	padding-left: 10px;
+}
+
+.copy:hover {
+  color: #fff;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  cursor: pointer; 
+}
+
+#copied {
+	color: white;
+	padding-bottom: 10px;
 }
 
 #random-code {
-	border: 1px black dotted;
 	display: inline-block;
 	margin-bottom: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	width: 300px;
 	font-weight: bolder;
-	color: white;
 	border: #bad433 2px solid;
+}
+
+#actual-code {
+	display: inline-block;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
 }
 
 .usedSection {
@@ -136,6 +159,7 @@ h1 {
     	margin: 0 auto;
     	margin-top: 50px;
     	width: 90%;
+    	border: none;
     }
 
     .button {
