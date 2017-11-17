@@ -126,6 +126,45 @@ h1 {
 
 
 
+.addCode {
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: #bad433;
+}
+
+.codeForm {
+	width: 300px;
+}
+
+.enterCode {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+.submitCode {
+	background-color: #bad433;
+	border: 2px #bad433 solid;
+	color: black;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+
+
+
+//Stops extra spacing after form validation fail
+div.field_with_errors {
+  display: inline;
+}
+
+
 @media screen and (max-width: 760px) {
     .code-count {
         display: none;

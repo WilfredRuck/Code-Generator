@@ -19,12 +19,36 @@ class CodeController < ApplicationController
 	  	code = (firstLetters + numbers + secondLetters)
 	  	if (Code.where(code: code).any? == false)
 		  	Code.create(code: code)
-		  	flash[:code] = code;
+		  	flash[:code] = code
 	  		redirect_to root_path
 	  	else
 	  		code = ''
 	  	end
 	end
   end
+
+  def new
+  	@code = Code.new
+  end
+
+  def adminCreate
+  	@code = Code.new(code_params)
+
+  	if @code.save
+  		flash[:message] = "#{@code.code} Added!"
+  		redirect_to woar_path
+  	else
+  		flash[:message] = "Code Not Added!"
+  		flash.discard
+  		render 'new'
+  	end
+  end
+
+
+  private
+
+	def code_params
+		params.require(:code).permit(:code)
+	end
 
 end
