@@ -1,4 +1,5 @@
 class CodeController < ApplicationController
+  
   def index
   	flash[:success] = "Code created!"
   	@codes = Code.all.reverse

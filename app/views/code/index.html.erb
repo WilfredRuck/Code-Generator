@@ -1,27 +1,40 @@
 <div class="genSection">
 	<h1>CODE GENERATOR</h1>
 		
+		<!-- IF A CODE WAS GENERATED... -->
 		<% if flash[:code] %>
 			<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
 			<div id="random-code">
 				<div id="actual-code">
 					<%= flash[:code] %>
 				</div>
+
+				<!-- COPY BUTTON FOR NEWLY GENERATED CODE -->
 				<button onclick="copyText('<%= flash[:code] %>')" class="copy">Copy</button>
 			</div>
 			
+			<!-- COPY NOTIFICATION -->
 			<div id="copied"></div>
 		<% end %>
-
+	
+	<!-- GENERATE CODE BUTTON -->
 	<%= button_to 'Generate new code', code_index_path, :class => "button", :method => :post %>
 </div>
 
 <div class="usedSection">
+	
+	<!-- GETS ALL CODES EVER GENERATED -->
 	<% @codes.each do |x| %>
-		<div class="usedCode"><%= x.code %></div>
+		<div class="usedCode">
+			<%= x.code %> 
+
+			<!-- COPY BUTTON FOR CODE -->
+			<button onclick="copyText('<%= x.code %>')" class="copy2">Copy</button>
+		</div>
 	<% end %>
 </div>
 
 <div>
+	<!-- ANIMATED CODE COUNTER -->
 	<div class="code-count"><%= @codes.length %></div>
 </div>

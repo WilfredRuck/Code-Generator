@@ -1,7 +1,7 @@
 // Place all the styles related to the Code controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
 	background-color: black;
@@ -25,6 +25,13 @@ h1 {
 	right: 0;
 	margin: 30px;
 	animation: pulse 1s infinite alternate;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+	                      supported by Chrome and Opera */
 }
 
 @keyframes pulse {
@@ -58,30 +65,49 @@ h1 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 300px;
+	border-radius: 0;
+	outline: none;
 }
 
 .button:hover {
 	color: white;
 	cursor: pointer;
-	-webkit-transition: all 250ms linear;
-  	transition: all 250ms linear;
+	-webkit-transition: all 100ms linear;
+  	transition: all 100ms linear;
 }
 
 .copy {
 	background-color: #bad433;
 	color: #000000;
+	border-radius: 0;
 	border: none;
 	float: right;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	padding-right: 8px;
 	padding-left: 10px;
+	outline: none;
 }
 
 .copy:hover {
   color: #fff;
-  -webkit-transition: all 250ms linear;
-  transition: all 250ms linear;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
+  cursor: pointer; 
+}
+
+.copy2 {
+	background-color: #bad433;
+	color: #000000;
+	border-radius: 0;
+	border: none;
+	outline: none;
+}
+
+.copy2:hover {
+  color: #fff;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
   cursor: pointer; 
 }
 
@@ -149,6 +175,7 @@ h1 {
 .submitCode {
 	background-color: #bad433;
 	border: 2px #bad433 solid;
+	border-radius: 0;
 	color: black;
 	font-size: 16px;
 	padding-top: 10px;
