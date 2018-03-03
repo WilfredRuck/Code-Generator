@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 6, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 11, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+h1 {
+  font-size: 45px;
+  color: white;
+}
+
+/* line 16, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.code-count {
+  font-size: 28px;
+  color: #bad433;
+  border: #fff 2px solid;
+  border-radius: 50%;
+  padding: 15px;
+  display: inline;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  animation: pulse 1s infinite alternate;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0px 0px 0px 0px #000000;
+  }
+  to {
+    box-shadow: 0px 0px 20px 5px #bad433;
+  }
+}
+/* line 42, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+#success {
+  color: red;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+/* line 48, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.genSection {
+  display: table;
+  margin: 0 auto;
+  width: 550px;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background-color: #0a0a00;
+  border: #fff 2px solid;
+}
+
+/* line 60, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.button {
+  background-color: #bad433;
+  border: 2px #bad433 solid;
+  color: black;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 300px;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* line 73, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.button:hover {
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+}
+
+/* line 80, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.copy {
+  background-color: #bad433;
+  color: #000000;
+  border-radius: 0;
+  border: none;
+  float: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 8px;
+  padding-left: 10px;
+  outline: none;
+}
+
+/* line 93, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.copy:hover {
+  color: #fff;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
+  cursor: pointer;
+}
+
+/* line 100, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.copy2 {
+  background-color: #bad433;
+  color: #000000;
+  border-radius: 0;
+  border: none;
+  outline: none;
+}
+
+/* line 108, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.copy2:hover {
+  color: #fff;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
+  cursor: pointer;
+}
+
+/* line 115, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+#copied {
+  color: white;
+  padding-bottom: 10px;
+}
+
+/* line 120, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+#random-code {
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 300px;
+  font-weight: bolder;
+  border: #bad433 2px solid;
+}
+
+/* line 128, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+#actual-code {
+  display: inline-block;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
+
+/* line 136, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.usedSection {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  width: 550px;
+  margin-top: 60px;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.1em;
+}
+
+/* line 147, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.usedCode {
+  border-top: solid 2px #bad433;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+
+/* line 156, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.addCode {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+  color: #bad433;
+}
+
+/* line 164, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.codeForm {
+  width: 300px;
+}
+
+/* line 168, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.enterCode {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* line 176, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+.submitCode {
+  background-color: #bad433;
+  border: 2px #bad433 solid;
+  border-radius: 0;
+  color: black;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* line 191, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+div.field_with_errors {
+  display: inline;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 197, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .code-count {
+    display: none;
+  }
+
+  /* line 201, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .usedSection {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%;
+  }
+
+  /* line 207, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .genSection {
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 300px;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 216, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .code-count {
+    display: none;
+  }
+
+  /* line 220, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .usedSection {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%;
+  }
+
+  /* line 226, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .genSection {
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 300px;
+    width: 90%;
+    border: none;
+  }
+
+  /* line 234, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  .button {
+    width: 250px;
+  }
+
+  /* line 238, /Users/wilfredruck/Desktop/Projects/CodeGenerator/app/assets/stylesheets/code.scss */
+  #random-code {
+    width: 250px;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
