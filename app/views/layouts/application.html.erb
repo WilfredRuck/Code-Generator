@@ -7,7 +7,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   	
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MAILCHIMP SUBSCRIPTION POPUP -->
+    <script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+    <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"e57539882f1eec87359b89960","lid":"1e5572bca7"}) })</script> 
 
   </head>
 

@@ -1,4 +1,4 @@
- $(document).ready(function(){
+$(document).ready(function(){
     setTimeout(function() {
       $('#success').fadeOut('slow');
     }, 3000); // <-- time in milliseconds
