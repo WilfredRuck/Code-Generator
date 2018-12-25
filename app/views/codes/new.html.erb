@@ -7,12 +7,12 @@
 	<% end %>
 
 	<!-- FORM TO ENTER A CODE MANUALLY -->
-	<%= form_for @code, url: { :action => :adminCreate }, :method => :POST do |f| %>
+	<%= form_for @code, url: { action: :adminCreate }, method: :POST do |f| %>
 		<div class="codeForm">
 			<h2> Admin </h2>
-			<div> <%= f.text_field :code, placeholder: "Enter Code", :autocomplete => :off, :class => "enterCode" %> </div>
+			<div> <%= f.text_field :code, placeholder: "Enter Code", autocomplete: :off, class: "enterCode" %> </div>
 				
-			<div> <%= f.submit "Add Code To Database", :class => "submitCode" %> </div>
+			<div> <%= f.submit "Add Code To Database", class: "submitCode" %> </div>
 		</div>
-	<%end%>
+	<% end %>
 </body>

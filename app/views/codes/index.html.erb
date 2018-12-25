@@ -36,5 +36,9 @@
 
 <div>
 	<!-- ANIMATED CODE COUNTER -->
-	<div class="code-count"><%= @codes.length %></div>
+	<% if @codes_count && @codes_count < 10 %>
+		<div class="code-count">0<%= @codes_count %></div>
+	<% elsif @codes_count && @codes_count >= 10 %>
+		<div class="code-count"><%= @codes_count %></div>
+	<% end %>
 </div>

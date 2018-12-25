@@ -2,34 +2,36 @@ class CodesController < ApplicationController
   
   def index
   	flash[:success] = "Code created!"
-  	@codes = Code.all.reverse
-  end
-
-  def new
-  	@code = Code.new
+    @codes = Code.all.reverse
+    @codes_count = @codes.length
   end
 
   def create
     code = ''
     while(code == '')
-      firstLetters = ('A'..'Z').to_a.shuffle[0,2].join
+      first_letters = ('A'..'Z').to_a.shuffle[0,2].join
       
-      numbers = rand(0...99).to_s
+      numbers = rand(0...100).to_s
       if numbers.length == 1
         numbers.insert(0,'0')
       end
-
-      secondLetters = ('A'..'Z').to_a.shuffle[0,2].join
-
-      code = (firstLetters + numbers + secondLetters)
-      if (Code.where(code: code).any? == false)
+      
+      second_letters = ('A'..'Z').to_a.shuffle[0,2].join
+      
+      code = (first_letters + numbers + second_letters)
+      new_code = Code.new(code: code)
+      if new_code.save
         Code.create(code: code)
         flash[:code] = code
-        redirect_to root_path
+        redirect_to root_url
       else
         code = ''
       end
     end
+  end
+  
+  def new
+    @code = Code.new
   end
 
   def adminCreate
@@ -37,14 +39,13 @@ class CodesController < ApplicationController
 
   	if @code.save
   		flash[:message] = "#{@code.code} Added!"
-  		redirect_to woar_path
+  		redirect_to woar_url
   	else
-  		flash[:message] = "Code Not Added!"
+  		flash[:message] = @code.errors.full_messages
   		flash.discard
   		render 'new'
   	end
   end
-
 
   private
 
