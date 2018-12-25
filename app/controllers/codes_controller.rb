@@ -1,4 +1,4 @@
-class CodeController < ApplicationController
+class CodesController < ApplicationController
   
   def index
   	flash[:success] = "Code created!"
