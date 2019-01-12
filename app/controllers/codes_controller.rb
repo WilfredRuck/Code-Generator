@@ -21,7 +21,6 @@ class CodesController < ApplicationController
       code = (first_letters + numbers + second_letters)
       new_code = Code.new(code: code)
       if new_code.save
-        Code.create(code: code)
         flash[:code] = code
         redirect_to root_url
       else
