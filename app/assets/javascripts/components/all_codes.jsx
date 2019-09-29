@@ -23,7 +23,7 @@ class AllCodes extends React.Component {
   render() {
     const lis = this.props.codes.map((code) => {
       return (
-        <li className="usedCode" onClick={(e) => this.copyCode(e.target, code.code)} key={code.id}>{code.code}</li>
+        <li className="usedCode" onClick={(e) => this.copyCode(e.target, code.name)} key={code.id}>{code.name}</li>
       );
     })
     return(

@@ -37,7 +37,7 @@ class CodesController < ApplicationController
   	@code = Code.new(code_params)
 
   	if @code.save
-  		flash[:message] = "#{@code.code} Added!"
+  		flash[:message] = "#{@code.name} Added!"
   		redirect_to woar_url
   	else
   		flash[:message] = @code.errors.full_messages
