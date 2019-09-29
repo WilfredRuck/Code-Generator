@@ -21,13 +21,14 @@ class AllCodes extends React.Component {
   }
 
   render() {
-    const lis = this.props.codes.map((code) => {
+    const lis = this.state.codes.map((code) => {
       return (
-        <li className="usedCode" onClick={(e) => this.copyCode(e.target, code.name)} key={code.id}>{code.name}</li>
-      );
-    })
-    return(
-      <ul className="usedSection">{lis}</ul>
-    )
+        <li className="usedCode" onClick={(e) => this.copyCode(e.target, code.name)} key={code.id}> 
+          {code.name} 
+        </li>
+      )
+    });
+
+    return <ul className="usedSection"> {lis} </ul>
   }
 }

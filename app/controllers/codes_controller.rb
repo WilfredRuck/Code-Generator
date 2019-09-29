@@ -19,7 +19,7 @@ class CodesController < ApplicationController
       second_letters = ('A'..'Z').to_a.shuffle[0,2].join
       
       code = (first_letters + numbers + second_letters)
-      new_code = Code.new(code: code)
+      new_code = Code.new(name: code)
       if new_code.save
         flash[:code] = code
         redirect_to root_url
@@ -49,7 +49,7 @@ class CodesController < ApplicationController
   private
 
 	def code_params
-		params.require(:code).permit(:code)
+		params.require(:code).permit(:name)
 	end
 
 end
