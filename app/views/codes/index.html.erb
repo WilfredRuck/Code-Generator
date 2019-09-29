@@ -1,35 +1,4 @@
-<div class="genSection">
-	<h1>CODE GENERATOR</h1>
-
-		<!-- IF A CODE WAS GENERATED... -->
-		<% if flash[:code] %>
-		<div class="code-gen-section">
-				<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
-				<div id="random-code">
-					<div id="actual-code">
-						<%= flash[:code] %>
-					</div>
-
-					<!-- COPY BUTTON FOR NEWLY GENERATED CODE -->
-					<button onclick="copyText('<%= flash[:code] %>')" class="copy">Copy</button>
-				</div>
-				<div id="copied"></div> <!-- COPY NOTIFICATION -->
-		</div>
-		<% end %>
-
-	
-	<!-- GENERATE CODE BUTTON -->
-	<%= button_to 'Generate new code', codes_url, :class => "gen-button", :method => :post %>
-</div>
-
-<div class="usedSection">
-	
-	<!-- GETS ALL CODES EVER GENERATED -->
-	<% @codes.each do |x| %>
-		<div class="usedCode" onclick="copyText2('<%= x.code %>', this)"> <%= x.code %> </div>
-	<% end %>
-</div>
-
+<%= react_component('App', codes: @codes) %>
 <div>
 	<!-- ANIMATED CODE COUNTER -->
 	<% if @codes_count && @codes_count < 10 %>
