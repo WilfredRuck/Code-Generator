@@ -1,9 +1,6 @@
 class AllCodes extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      codes: this.props.codes
-    };
     this.copyCode = this.copyCode.bind(this);
     this.displayCopyMessage = this.displayCopyMessage.bind(this);
   }
@@ -21,7 +18,7 @@ class AllCodes extends React.Component {
   }
 
   render() {
-    const lis = this.state.codes.map((code) => {
+    const lis = this.props.codes.map((code) => {
       return (
         <li className="usedCode" onClick={(e) => this.copyCode(e.target, code.name)} key={code.id}> 
           {code.name} 
