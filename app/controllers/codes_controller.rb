@@ -2,7 +2,7 @@ class CodesController < ApplicationController
   
   def index
   	flash[:success] = "Code created!"
-    @codes = Code.all.reverse
+    @codes = Code.all
     @codes_count = @codes.length
   end
 

@@ -1,6 +1,6 @@
 class Api::CodesController < ApplicationController
   def index
-    @codes = Code.all.reverse
+    @codes = Code.all
     @codes_count = @codes.size
     render json: @codes
   end

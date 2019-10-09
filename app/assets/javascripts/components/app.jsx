@@ -15,7 +15,7 @@ class App extends React.Component {
       url: '/api/codes',
       success: (response) => {
         const new_code = response[Object.keys(response).length];
-        const updated_code_list = this.state.codes.concat(new_code);
+        const updated_code_list = this.state.codes.reverse().concat(new_code);
         this.setState({codes: updated_code_list});
       }
     });
@@ -30,7 +30,7 @@ class App extends React.Component {
         </div>
 
         <div>
-          <AllCodes codes={this.state.codes}/>
+          <AllCodes codes={this.state.codes.reverse()}/>
         </div>
       </div>
     )
