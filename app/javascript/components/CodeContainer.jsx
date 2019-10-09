@@ -1,4 +1,7 @@
-class App extends React.Component {
+import React from 'react';
+import AllCodes from './AllCodes'
+
+class CodeContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { codes: [] };
@@ -36,3 +39,5 @@ class App extends React.Component {
     )
   }
 }
+
+export default CodeContainer;
