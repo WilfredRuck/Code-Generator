@@ -35,6 +35,11 @@ class CodeContainer extends React.Component {
         <div>
           <AllCodes codes={this.state.codes.reverse()}/>
         </div>
+        
+        {/* <!-- ANIMATED CODE COUNTER --> */}
+        <div>
+          <div className="code-count">{this.state.codes.length}</div>
+        </div>
       </div>
     )
   }

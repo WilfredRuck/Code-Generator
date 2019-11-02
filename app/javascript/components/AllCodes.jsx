@@ -1,5 +1,4 @@
-import React from "react";
-import { CSSTransitionGroup } from 'react-transition-group'
+import React from 'react';
 
 class AllCodes extends React.Component {
   constructor(props) {
@@ -29,14 +28,8 @@ class AllCodes extends React.Component {
       )
     });
 
-    return (
-      <CSSTransitionGroup
-          transitionName="example"
-          transitionEnterTimeout={500}>
-      <ul className="usedSection"> {lis} 
-      </ul>
-    </CSSTransitionGroup>
-  )}
+    return <ul className="usedSection"> {lis} </ul> 
+  }
 }
 
 export default AllCodes;
